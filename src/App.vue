@@ -1,12 +1,15 @@
 <script setup>
-import Todo from "./components/Todo.vue"
 
 </script>
 
 <template>
-  <main>
-    <Todo />  
-  </main>
+   <div id="app">
+    <nav>
+      <router-link to="/" class="hover:text-green-400">Home</router-link> |
+      <router-link to="/about" class="hover:text-green-400">About</router-link> |
+    </nav>
+    <router-view></router-view>
+  </div>
 </template>
 
 <style scoped>
@@ -22,7 +25,7 @@ header {
   margin: 0 auto 2rem;
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   header {
     display: flex;
     place-items: center;
@@ -38,5 +41,5 @@ header {
     place-items: flex-start;
     flex-wrap: wrap;
   }
-}
+} */
 </style>
