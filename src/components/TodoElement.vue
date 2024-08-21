@@ -1,7 +1,12 @@
 <script setup>
+import { useRouter } from 'vue-router';
+const router = useRouter();
   defineProps({
     todos: Array
   })
+  function edit(taskId){
+    router.push({ name: 'edit', params: { taskId } });
+  }
 </script>
 
 <template>
